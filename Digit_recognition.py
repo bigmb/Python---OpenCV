@@ -1,20 +1,12 @@
 
-# coding: utf-8
-
-# In[ ]:
-
-
 ##Digit Recognition
-
-
-# In[ ]:
 
 
 import numpy as np
 import cv2
 
 #importing the digit image
-image = cv2.imread('images/digits.png')
+image = cv2.imread('images/digits.png') #image you want
 gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 small = cv2.pyrDown(image)
 cv2.imshow('Digits Image', small)
@@ -79,11 +71,11 @@ def makeSquare(not_square):
         if (height > width):
             pad = (height - width)/2
             #print("Padding = ", pad)
-            doublesize_square = cv2.copyMakeBorder(doublesize,0,0,pad,                                                   pad,cv2.BORDER_CONSTANT,value=BLACK)
+            doublesize_square = cv2.copyMakeBorder(doublesize,0,0,pad, pad,cv2.BORDER_CONSTANT,value=BLACK)
         else:
             pad = (width - height)/2
             #print("Padding = ", pad)
-            doublesize_square = cv2.copyMakeBorder(doublesize,pad,pad,0,0,                                                   cv2.BORDER_CONSTANT,value=BLACK)
+            doublesize_square = cv2.copyMakeBorder(doublesize,pad,pad,0,0,cv2.BORDER_CONSTANT,value=BLACK)
     doublesize_square_dim = doublesize_square.shape
     #print("Sq Height = ", doublesize_square_dim[0], "Sq Width = ", doublesize_square_dim[1])
     return doublesize_square
@@ -91,7 +83,6 @@ def makeSquare(not_square):
 
 def resize_to_pixel(dimensions, image):
     # This function then re-sizes an image to the specificied dimenions
-    
     buffer_pix = 4
     dimensions  = dimensions - buffer_pix
     squared = image
