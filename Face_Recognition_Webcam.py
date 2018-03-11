@@ -1,14 +1,6 @@
 
-# coding: utf-8
-
-# In[1]:
-
 
 ##Face Recognition using webcam
-
-
-# In[ ]:
-
 
 import cv2
 import numpy as np
