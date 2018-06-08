@@ -5,5 +5,5 @@ setup(
     version="0.0.1",
     description="files for programs",
     py_modules=["Digit_recognition"],
-    install_requires=["numpy","cv"]
+    install_requires=["numpy","cv2"]
 )
